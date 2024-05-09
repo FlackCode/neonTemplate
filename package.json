@@ -1,0 +1,30 @@
+{
+  "name": "neontemplate",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "cf-typegen": "wrangler types",
+    "db:generate": "drizzle-kit generate:pg --schema=./src/db/schema.ts",
+    "db:migrate": "tsx ./src/db/migrate.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.2.6",
+    "@cloudflare/workers-types": "^4.20240502.0",
+    "drizzle-kit": "^0.20.18",
+    "tsx": "^4.9.3",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0",
+    "wrangler": "^3.53.1"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.1",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
+    "hono": "^4.3.3",
+    "postgres": "^3.4.4"
+  }
+}
